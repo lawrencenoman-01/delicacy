@@ -1,0 +1,263 @@
+@import '../../style/color.scss';
+@import '../../style//display.scss';
+@import '../../style/App.scss';
+
+.container_card::-webkit-scrollbar {
+    display: none
+}
+
+.container_card {
+    @include flex_row;
+    gap: 15%;
+    overflow-x: scroll;
+    padding-bottom: 50px;
+
+    .card_content {
+        @include flex_center;
+        background-color: $white_color;
+        min-width: 607px;
+        max-width: 607px;
+        height: 500px;
+        margin: 10px 0 0 90px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 5px 0px;
+        position: relative;
+        // background-color: red;
+
+        .content_left {
+            background-color: $background_color;
+            // background-color: red;
+            width: 96%;
+            height: 490px;
+            border-radius: 20px;
+
+            h1 {
+                // background-color: red;
+                color: $text_black_color;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 10px;
+            }
+
+            p {
+                // background-color: red;
+                color: $text_black_color;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 10px;
+                max-width: 60%;
+                max-height: 35%;
+                letter-spacing: .2px;
+                overflow-y: scroll;
+            }
+
+            .content_title {
+                color: $text_grey_color;
+                font-size: 20px;
+                font-weight: 700;
+                margin-top: 30px;
+            }
+
+            // Wrapped Style
+            .wrapped_content {
+                @include flex_row;
+                gap: 30px;
+                flex-wrap: wrap;
+                // background-color: blue;
+                max-width: 250px;
+                margin: 10px;
+
+                .bottom_content {
+                    @include flex_center;
+                    padding: .3rem 0;
+                    gap: 10px;
+
+                    // background-color: red;
+                    .content_image {
+                        @include flex_center;
+                        width: 45px;
+                        height: 35px;
+                        // padding: 5px;
+                        border-radius: 5px;
+                        box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+                        background: transparent;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+
+                    .content_body {
+                        @include flex_column;
+                        text-wrap: wrap;
+
+                        // align-items: center;
+                        // justify-content: center;
+                        // background-color: red;
+                        .h1 {
+                            color: $text_black_color;
+                            font-size: 10px;
+                            font-weight: 500;
+                            max-width: 20px;
+                            margin: 0;
+                        }
+
+                        h5 {
+                            color: $text_grey_color;
+                            font-size: 9px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            // Bottom Style
+            .bottom_btn {
+                @include flex_row;
+                margin: 10px;
+                gap: 4rem;
+
+                .btn {
+                    @include flex_center;
+                    width: 120px;
+                    height: 30px;
+                    // padding: 10px;
+                    color: $primary_color;
+                    border: 1px solid $primary_color;
+                    border-radius: 5px;
+                    background: transparent;
+                    font-size: 10px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .content_right img {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            right: -35%;
+        }
+    }
+}
+
+// .container_card {
+//     width: 100%;
+//     min-width: 20%;
+//     border-radius: 20px;
+//     background: #000;
+//     overflow-x: scroll;
+
+//     .container_card_content {
+//         background: $background_color;
+//         border-radius: 20px;
+//         width: 40rem;
+//         height: 32rem;
+//         margin: 5px;
+//         position: relative;
+//         display: flex;
+
+//         .card_content {
+//             @include flex_column;
+//             gap: 2rem;
+//             margin: 10px 0 0 12px;
+
+//             // background-color: red;
+//             .content_top {
+//                 @include flex_column;
+//                 gap: 1rem;
+
+//                 h1 {
+//                     color: $text_black_color;
+//                     font-size: 17px;
+//                     font-weight: 600;
+//                 }
+
+//                 p {
+//                     color: $text_black_color;
+//                     font-size: 13.208px;
+//                     font-weight: 400;
+//                     max-width: 20rem;
+//                     max-height: 10rem;
+//                     // background-color: red;
+//                 }
+//             }
+
+//             .content_bottom {
+//                 // background-color: red;
+//                 max-width: 20rem;
+
+//                 .bottom_title h1 {
+//                     color: $text_grey_color;
+//                     font-size: 17px;
+//                     font-weight: 700;
+//                 }
+
+//                 .wrapped_bottom_content {
+//                     @include flex_row;
+//                     gap: 2rem;
+//                     flex-wrap: wrap;
+//                     // background-color: red;
+//                     margin: 10px 0;
+//                     .bottom_content {
+//                         // background-color: blue;
+//                         @include flex_row;
+//                         align-items: center;
+//                         padding: .3rem 0;
+//                         gap: 10px;
+
+//                         .content_image {
+//                             @include flex_center;
+//                             width: 45px;
+//                             height: 35px;
+//                             padding: 5px;
+//                             color: $black_color;
+//                             // border: 1px solid $primary_color;
+//                             border-radius: 5px;
+//                             box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+//                             background: transparent;
+//                             text-align: center;
+//                             font-weight: 500;
+//                         }
+
+//                         .content_body {
+//                             h1 {
+//                                 color: $text_black_color;
+//                                 font-size: 15px;
+//                                 font-weight: 500;
+//                             }
+
+//                             p {
+//                                 color: $text_grey_color;
+//                                 font-size: 9px;
+//                                 font-weight: 500;
+//                             }
+//                         }
+//                     }
+//                 }
+
+//                 .bottom_btn {
+//                     @include flex_row;
+//                     // justify-content: space-evenly;
+//                     gap: 5rem;
+//                 }
+
+//                 .btn {
+//                     @include flex_center;
+//                     width: 120px;
+//                     height: 30px;
+//                     padding: 10px;
+//                     color: $primary_color;
+//                     border: 1px solid $primary_color;
+//                     border-radius: 5px;
+//                     background: transparent;
+//                     text-align: center;
+//                     font-size: 10px;
+//                     font-weight: 500;
+//                 }
+//             }
+
+
+//         }
+//     }
+// }

@@ -1,0 +1,33 @@
+@import '../../style/color.scss';
+@import '../../style//display.scss';
+@import '../../style/App.scss';
+
+.container_navigation {
+    background-color: $background_color;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    .logo_navigation {
+        color: $text_black_color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 5px 0 0 24px;
+    }
+
+    .categories_navigation {
+        @include flex_row;
+        gap: 34px;
+        padding: 10px 0 10px 6rem;
+        p {
+            color: $text_grey_color;
+            cursor: pointer;
+        }
+        .selected {
+            color: $text_black_color;
+        }
+    }
+
+    .categories_navigation p:hover {
+        color: $text_black_color;
+    }
+}
